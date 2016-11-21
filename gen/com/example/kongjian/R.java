@@ -656,6 +656,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 </table>
          */
         public static final int showDividers=0x7f010055;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int slide_button=0x7f01006f;
         /**  Default Spinner style. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -693,6 +697,18 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int subtitleTextStyle=0x7f01002b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int switch_background=0x7f01006e;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int switch_state=0x7f010070;
         /**  Present the text in ALL CAPS. This may use a small-caps form when available. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1087,19 +1103,28 @@ containing a value of this type.
         public static final int channel5=0x7f02005e;
         public static final int channel6=0x7f02005f;
         public static final int channel7=0x7f020060;
-        public static final int d=0x7f020061;
-        public static final int e=0x7f020062;
-        public static final int ic_launcher=0x7f020063;
-        public static final int icon_home=0x7f020064;
-        public static final int icon_menu=0x7f020065;
-        public static final int icon_myyouku=0x7f020066;
-        public static final int icon_search=0x7f020067;
-        public static final int level1=0x7f020068;
-        public static final int level2=0x7f020069;
-        public static final int level3=0x7f02006a;
-        public static final int select_lunbo_point_bg=0x7f02006b;
-        public static final int shape_lunbo_point=0x7f02006c;
-        public static final int shape_lunbo_point_unselect=0x7f02006d;
+        public static final int common_listview_headview_red_arrow=0x7f020061;
+        public static final int d=0x7f020062;
+        public static final int delete=0x7f020063;
+        public static final int down_arrow=0x7f020064;
+        public static final int e=0x7f020065;
+        public static final int ic_launcher=0x7f020066;
+        public static final int icon_home=0x7f020067;
+        public static final int icon_menu=0x7f020068;
+        public static final int icon_myyouku=0x7f020069;
+        public static final int icon_search=0x7f02006a;
+        public static final int level1=0x7f02006b;
+        public static final int level2=0x7f02006c;
+        public static final int level3=0x7f02006d;
+        public static final int listview_background=0x7f02006e;
+        public static final int progress_bar_style=0x7f02006f;
+        public static final int search_bg=0x7f020070;
+        public static final int select_lunbo_point_bg=0x7f020071;
+        public static final int shape_lunbo_point=0x7f020072;
+        public static final int shape_lunbo_point_unselect=0x7f020073;
+        public static final int slide_button=0x7f020074;
+        public static final int switch_background=0x7f020075;
+        public static final int user=0x7f020076;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1113,7 +1138,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050044;
+        public static final int action_settings=0x7f050054;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1125,28 +1150,40 @@ containing a value of this type.
         public static final int dropdown=0x7f05000f;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
+        public static final int et_search=0x7f050051;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
-        public static final int ib_home=0x7f050040;
-        public static final int ib_menu=0x7f050042;
+        public static final int ib_delete_btn=0x7f050043;
+        public static final int ib_down_arrow=0x7f050052;
+        public static final int ib_home=0x7f050048;
+        public static final int ib_menu=0x7f05004a;
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
+        public static final int iv_user=0x7f050041;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
-        public static final int ll_point_group=0x7f05003e;
+        public static final int ll_bottom=0x7f050040;
+        public static final int ll_list_view_header=0x7f050044;
+        public static final int ll_point_group=0x7f05004f;
+        public static final int ll_search=0x7f05003d;
+        public static final int ll_top=0x7f05003c;
         public static final int middle=0x7f050012;
+        public static final int mlv_list_view=0x7f05003f;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int rl_level1=0x7f05003f;
-        public static final int rl_level2=0x7f050041;
-        public static final int rl_level3=0x7f050043;
+        public static final int rl_level1=0x7f050047;
+        public static final int rl_level2=0x7f050049;
+        public static final int rl_level3=0x7f05004b;
+        public static final int rl_lunbo=0x7f05004c;
+        public static final int rl_search_group=0x7f050050;
+        public static final int sb_switch_btn=0x7f050053;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1163,13 +1200,17 @@ containing a value of this type.
         public static final int showTitle=0x7f050006;
         public static final int split_action_bar=0x7f05001e;
         public static final int submit_area=0x7f050039;
+        public static final int sv_content=0x7f05003e;
         public static final int tabMode=0x7f050002;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
-        public static final int tv_image_des=0x7f05003d;
+        public static final int tv_image_des=0x7f05004e;
+        public static final int tv_state=0x7f050045;
+        public static final int tv_update_time=0x7f050046;
+        public static final int tv_user_name=0x7f050042;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
-        public static final int vp_lunbo=0x7f05003c;
+        public static final int vp_lunbo=0x7f05004d;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1223,7 +1264,13 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int item_pop_list=0x7f030019;
+        public static final int list_view_header=0x7f03001a;
+        public static final int main_bottom=0x7f03001b;
+        public static final int main_lunbo=0x7f03001c;
+        public static final int main_search=0x7f03001d;
+        public static final int main_top=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -2961,6 +3008,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.example.kongjian:spinnerMode
         */
         public static final int Spinner_spinnerMode = 7;
+        /** Attributes that can be used with a SwitchButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SwitchButton_slide_button com.example.kongjian:slide_button}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchButton_switch_background com.example.kongjian:switch_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchButton_switch_state com.example.kongjian:switch_state}</code></td><td></td></tr>
+           </table>
+           @see #SwitchButton_slide_button
+           @see #SwitchButton_switch_background
+           @see #SwitchButton_switch_state
+         */
+        public static final int[] SwitchButton = {
+            0x7f01006e, 0x7f01006f, 0x7f010070
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.kongjian.R.attr#slide_button}
+          attribute's value can be found in the {@link #SwitchButton} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.kongjian:slide_button
+        */
+        public static final int SwitchButton_slide_button = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.kongjian.R.attr#switch_background}
+          attribute's value can be found in the {@link #SwitchButton} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.kongjian:switch_background
+        */
+        public static final int SwitchButton_switch_background = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.kongjian.R.attr#switch_state}
+          attribute's value can be found in the {@link #SwitchButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.kongjian:switch_state
+        */
+        public static final int SwitchButton_switch_state = 2;
         /**  These are the standard attributes that make up a complete theme. 
            <p>Includes the following attributes:</p>
            <table>
