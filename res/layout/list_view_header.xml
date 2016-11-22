@@ -12,14 +12,17 @@
 	        android:padding="5dp"
 	        >
 	        <ImageView 
+	            android:id="@+id/iv_draw_arrow"
 	            android:layout_height="wrap_content"
 	            android:layout_width="wrap_content"
 	            android:src="@drawable/common_listview_headview_red_arrow"
 	            android:background="@null"
 	            android:layout_gravity="center"/>
 	        <ProgressBar 
+	            android:id="@+id/pb_reflush"
 	            android:layout_height="wrap_content"
 	            android:layout_width="wrap_content"
+	            android:visibility="invisible"
 	            android:indeterminateDrawable="@drawable/progress_bar_style"
 	            />
 	    </FrameLayout>
@@ -36,7 +39,7 @@
 	            android:textColor="#f00"
 	            android:layout_marginTop="5dp"
 	            android:textSize="18sp"
-	            android:text="释放刷新"/>
+	            android:text="下拉刷新"/>
 	        <TextView 
 	            android:id="@+id/tv_update_time"
 	            android:layout_height="wrap_content"

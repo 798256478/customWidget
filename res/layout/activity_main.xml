@@ -1,49 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.kongjian.MainActivity" >
-    <LinearLayout 
-        android:id="@+id/ll_top"
-	    android:layout_height="wrap_content"
-	    android:layout_width="match_parent"
-	    >
-		<include layout="@layout/main_top"/>
-	</LinearLayout>
-	<LinearLayout
-	    android:id="@+id/ll_search" 
-	    android:layout_below="@id/ll_top"
-	    android:layout_height="wrap_content"
-	    android:layout_width="match_parent"
-	    >
-		<include layout="@layout/main_search"/>
-	</LinearLayout>
-	<ScrollView 
-	    android:id="@+id/sv_content"
-	    android:layout_below="@+id/ll_search"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_marginBottom="50dp"
-	    >
-	    <LinearLayout 
-	        android:layout_height="wrap_content"
-	        android:layout_width="match_parent"
-	        android:orientation="vertical">
-			<include layout="@layout/main_lunbo"/>	
-			<com.example.kongjian.view.MyListView
-			    android:id="@+id/mlv_list_view"
-			    android:layout_height="wrap_content"
-			    android:layout_width="match_parent">
-			    
-			</com.example.kongjian.view.MyListView>
-		</LinearLayout>
-	</ScrollView>
-	<LinearLayout 
-	    android:id="@+id/ll_bottom"
-	    android:layout_height="wrap_content"
-	    android:layout_width="match_parent"
-	    >
-		<include layout="@layout/main_bottom"/>
-	</LinearLayout>
+    android:layout_height="match_parent" 
+    >
+    
+    <com.example.kongjian.view.SlideMenu
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/sl_slide_menu">
+        <include layout="@layout/menu"/>
+	    <include layout="@layout/main"/>
+	</com.example.kongjian.view.SlideMenu>
 </RelativeLayout>

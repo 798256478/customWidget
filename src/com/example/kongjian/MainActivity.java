@@ -6,8 +6,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.example.kongjian.utils.AnimationUtil;
+import com.example.kongjian.view.MyListView.OnReflushListener;
+import com.example.kongjian.view.SlideMenu;
 import com.example.kongjian.view.SwitchButton;
 import com.example.kongjian.view.SwitchButton.OnSwitchStateListener;
+import com.example.kongjian.view.MyListView;
 
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -61,8 +64,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener, 
 	private List<String> popListDatas;
 	private PopupWindow popupWindow;
 	private MyListAdapter myListAdapter;
-	private ListView mlv_list_view;
+	private MyListView mlv_list_view;
 	private List<String> customArrayList;
+	private CustomListAdapter customListAdapter;
+	private SlideMenu sl_slide_menu;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -149,7 +154,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener, 
 		myListAdapter = new MyListAdapter();
 		popListView.setAdapter(myListAdapter);
 		
-		CustomListAdapter customListAdapter = new CustomListAdapter();
+		customListAdapter = new CustomListAdapter();
 		mlv_list_view.setAdapter(customListAdapter);
 	}
 	
@@ -285,14 +290,75 @@ public class MainActivity extends ActionBarActivity implements OnClickListener, 
 			@Override
 			public void onSwitchState(boolean switch_state) {
 				if(switch_state){
+					sl_slide_menu.open();
 					Toast.makeText(getApplicationContext(), "开关打开了", 1000).show();
 				}else {
+					sl_slide_menu.close();
 					Toast.makeText(getApplicationContext(), "开关关闭了", 1000).show();
 				}
 			}
 		});
 		
-		mlv_list_view = (ListView) findViewById(R.id.mlv_list_view);
+		mlv_list_view = (MyListView) findViewById(R.id.mlv_list_view);
+		mlv_list_view.setOnReflushListener(new OnReflushListener(){
+			public void onReflush(){
+				new Thread(){
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(3000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						for (int i = 0; i < 3; i++) {
+							customArrayList.add(0, "这是刷新出来的数据" + i);
+						}
+						runOnUiThread(new Runnable() {
+							public void run() {
+								customListAdapter.notifyDataSetChanged();
+								mlv_list_view.reflushOver();
+							}
+						});
+					}
+				}.start();	
+			}
+
+			@Override
+			public void onLoad() {
+				new Thread(){
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(3000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						for (int i = 0; i < 3; i++) {
+							customArrayList.add("这是加载出来的数据" + i);
+						}
+						runOnUiThread(new Runnable() {
+							public void run() {
+								customListAdapter.notifyDataSetChanged();
+								mlv_list_view.loadOver();
+							}
+						});
+					}
+				}.start();	
+			}
+		});
+		
+		sl_slide_menu = (SlideMenu) findViewById(R.id.sl_slide_menu);
+		
+		LinearLayout ll_menu_click = (LinearLayout) findViewById(R.id.ll_menu_click);
+		for (int i = 0; i < ll_menu_click.getChildCount(); i++) {
+			ll_menu_click.getChildAt(i).setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					Toast.makeText(getApplicationContext(), "点击了", Toast.LENGTH_SHORT).show();
+				}
+			});
+		}
 	}
 
 	@Override

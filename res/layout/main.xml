@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kongjian.MainActivity" >
+    <LinearLayout 
+        android:id="@+id/ll_top"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    >
+		<include layout="@layout/main_top"/>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_search" 
+	    android:layout_below="@id/ll_top"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    >
+		<include layout="@layout/main_search"/>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_lunbo" 
+	    android:layout_below="@id/ll_search"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    >
+		<include layout="@layout/main_lunbo"/>
+	</LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_list_view" 
+	    android:layout_below="@id/ll_lunbo"
+	    android:layout_height="match_parent"
+	    android:layout_width="match_parent"
+	    >
+		<com.example.kongjian.view.MyListView
+			android:id="@+id/mlv_list_view"
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:layout_marginBottom="50dp">
+				    
+		</com.example.kongjian.view.MyListView>
+	</LinearLayout>
+
+	<LinearLayout 
+	    android:id="@+id/ll_bottom"
+	    android:layout_height="wrap_content"
+	    android:layout_width="match_parent"
+	    >
+		<include layout="@layout/main_bottom"/>
+	</LinearLayout>
+</RelativeLayout>

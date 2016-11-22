@@ -23,6 +23,7 @@ public class SwitchButton extends View {
 	private Boolean switch_state;
 	private Boolean is_touch = false;
 	private OnSwitchStateListener onSwitchStateListener;
+	public Boolean initState;
 
 	public SwitchButton(Context context) {
 		super(context);
@@ -36,6 +37,7 @@ public class SwitchButton extends View {
 		int switch_background = attrs.getAttributeResourceValue(namespace, "switch_background", -1);
 		int slide_button = attrs.getAttributeResourceValue(namespace, "slide_button", -1);
 		switch_state = attrs.getAttributeBooleanValue(namespace, "switch_state", false);
+		initState = switch_state;
 		
 		bitmap_switch_background = BitmapFactory.decodeResource(getResources(), switch_background);
 		bitmap_slide_button = BitmapFactory.decodeResource(getResources(), slide_button);
